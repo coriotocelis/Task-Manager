@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <form action="{{ url_for('agregar') }}" method="POST">
+            <input type="text" name="titulo" placeholder="Título de la tarea" required>
+            <input type="text" name="descripcion" placeholder="Descripción de la tarea" required>
+            <button type="submit">Agregar Tarea</button>
+        </form>
+
+        <h2>Tareas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tarea in tareas %}
+                <tr>
+                    <td>{{ tarea.id }}</td>
+                    <td>{{ tarea.titulo }}</td>
+                    <td>{{ tarea.descripcion }}</td>
+                    <td>{{ 'Completada' if tarea.completada else 'Pendiente' }}</td>
+                    <td>
+                        {% if not tarea.completada %}
+                        <a href="{{ url_for('completar', id=tarea.id) }}">Marcar como Completada</a>
+                        {% endif %}
+                        <a href="{{ url_for('eliminar', id=tarea.id) }}">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="acciones">
+            <a href="{{ url_for('guardar') }}">Guardar</a>
+        </div>
+    </div>
+</body>
+</html>
