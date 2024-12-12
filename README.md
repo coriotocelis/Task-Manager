@@ -41,3 +41,6 @@ Para ejecutar esta aplicación, necesitas tener las siguientes dependencias inst
 
    La aplicación se ejecutará en http://127.0.0.1:5000/ por defecto. Abre tu navegador y accede a esta URL para usar la aplicación de gestión de tareas.
 
+## Sonarqube
+
+![Sonar](sonar/Sonar.png)
