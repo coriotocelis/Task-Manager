@@ -48,6 +48,13 @@
         <div class="acciones">
             <a href="{{ url_for('guardar') }}">Guardar</a>
         </div>
+
+        <h3>Cargar archivo JSON</h3>
+        <form action="{{ url_for('cargar') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".json" required>
+            <button type="submit">Cargar JSON</button>
+        </form>
+
     </div>
 </body>
 </html>
