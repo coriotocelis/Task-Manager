@@ -8,7 +8,7 @@ Esta es una aplicación de gestión de tareas construida con **Flask** y **SQLAl
 
 - **Agregar tarea:** Permite añadir tareas con un título y una descripción.
 - **Marcar tarea como completada:** Puedes marcar una tarea como completada.
-- **Marcar tarea como completada:** Puedes marcar una tarea como Pendientes nuevamente.
+- **Marcar tarea como pendiente:** Puedes marcar una tarea como Pendientes nuevamente.
 - **Eliminar tarea:** Puedes eliminar tareas, ya sea completadas o pendientes.
 - **Guardar tareas:** Las tareas se pueden guardar en un archivo JSON.
 - **Cargar tareas:** Las tareas se pueden cargar desde un archivo JSON. 
