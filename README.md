@@ -43,4 +43,4 @@ Para ejecutar esta aplicación, necesitas tener las siguientes dependencias inst
 
 ## Sonarqube
 
-![Sonar](sonar/Sonar.png)
+![Sonar](src/sonar/Sonar.png)
