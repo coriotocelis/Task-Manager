@@ -43,7 +43,7 @@ def agregar():
 def completar(id):
     tarea = session.query(Tarea).filter(Tarea.id == id).first()
     if tarea:
-        tarea.completada = True
+        tarea.completada = not tarea.completada
         session.commit()
     return redirect(url_for('index'))
 
